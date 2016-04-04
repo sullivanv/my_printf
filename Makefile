@@ -2,7 +2,8 @@ CC	=	gcc
 NAME	=	test_printf
 SRC	=	main.c	\
 		my_printf.c \
-		function.c
+		function.c	\
+		option_csid.c
 
 OBJ	=	$(SRC:%.c=%.o)
 RM	=	rm -f
