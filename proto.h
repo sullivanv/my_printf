@@ -13,6 +13,7 @@ void    *my_c(va_list list);
 void    *my_s(va_list list);
 void    *my_i(va_list list);
 void    *my_d(va_list list);
+void    my_put_nbr_base(int nbr, int base, int x);
 
 
 typedef struct s_fonction

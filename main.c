@@ -3,7 +3,7 @@
 
 int main()
 {
-    char *str = "OUI";
+/*    char *str = "OUI";
     char c = 'N';
     char *atr = "!-";
     int dbtest = 1;
@@ -37,5 +37,13 @@ int main()
     printf("-Test6:\n");
     printf("%d\n", dbtest);
     my_printf("%d\n", dbtest);
+    my_put_nbr_base(42 ,16, 1);
+    my_putchar('\n');
+    my_put_nbr_base(42 ,16, 0);
+     my_putchar('\n');
+    my_put_nbr_base(42 ,2, 1);
+     my_putchar('\n');
+    my_put_nbr_base(42 ,2, 0);
+     my_putchar('\n');*/
     return(0);
 }

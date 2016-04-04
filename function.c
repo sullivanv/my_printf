@@ -47,3 +47,26 @@ void    my_put_nbr(int nbr)
         my_putchar(nbr + 48);
     }
 }
+
+void    my_put_nbr_base(int nbr, int base, int x) // x = 1 --> majuscule sur hexadecimal
+{
+    if (nbr < 0)
+      {
+        nbr = nbr * (-1);
+        my_putchar('-');
+      }
+    if (nbr >= base)
+      {
+        my_put_nbr_base(nbr / base, base, x);
+        my_put_nbr_base(nbr % base, base, x);
+      }
+    else
+      {
+        if (nbr > 9 && x == 0)
+          my_putchar(nbr + 87);
+        else if (nbr > 9 && x == 1)
+          my_putchar(nbr + 55);
+        else
+          my_putchar(nbr + 48);
+      }
+}
