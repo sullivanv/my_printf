@@ -3,7 +3,9 @@ NAME	=	test_printf
 SRC	=	main.c	\
 		my_printf.c \
 		function.c	\
-		option_csid.c
+		option_csid.c	\
+		option_oxX%.c	\
+		option_u.c
 
 OBJ	=	$(SRC:%.c=%.o)
 RM	=	rm -f

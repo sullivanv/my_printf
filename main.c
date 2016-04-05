@@ -45,5 +45,10 @@ int main()
      my_putchar('\n');
     my_put_nbr_base(42 ,2, 0);
      my_putchar('\n');*/
+     my_printf("1 - %o\n", 42); /* unsigned octal */
+    my_printf("2 - %u\n", (unsigned int)4200000000); /* unsigned decimal */
+    my_printf("3 - %x\n", 42); /* unsigned hexadecimal */
+    my_printf("4 - %X\n", 42); /* unsigned hexadecimal */
+    my_printf("5 - %d%%\n", 42);
     return(0);
 }

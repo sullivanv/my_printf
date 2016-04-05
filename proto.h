@@ -13,6 +13,11 @@ void    *my_c(va_list list);
 void    *my_s(va_list list);
 void    *my_i(va_list list);
 void    *my_d(va_list list);
+void    *my_o(va_list list);
+void    *my_x(va_list list);
+void    *my_X(va_list list);
+void    *my_pc(va_list list);
+void    *my_u(va_list list);
 void    my_put_nbr_base(int nbr, int base, int x);
 
 

@@ -7,6 +7,11 @@ t_fonction tab[] =
     {'c', &my_c},
     {'i', &my_i},
     {'d', &my_d},
+    {'o', &my_o},
+    {'x', &my_x},
+    {'X', &my_X},
+    {'%', &my_pc},
+    {'u', &my_u},
   };
 
 int    my_parse_str(char *str, int option_max, int position)
@@ -38,11 +43,11 @@ void    my_printf(char *str, ...)
     int position;
     int j;
     
-    position = 0;
-    option_max = 4;
+    position = -1;
+    option_max = 9;
     j = 0;
     va_start(list, str);
-    while (str[position])
+    while (str[++position])
     {
         if (my_parse_str(str, option_max, position) != -1)
         {
@@ -55,7 +60,6 @@ void    my_printf(char *str, ...)
             tab[j].fonction(list);
             position++;
         }
-        position++;
     }
     va_end(list);
 }

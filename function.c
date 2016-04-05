@@ -48,7 +48,9 @@ void    my_put_nbr(int nbr)
     }
 }
 
-void    my_put_nbr_base(int nbr, int base, int x) // x = 1 --> majuscule sur hexadecimal
+/* x = 1 -> majuscule sur l'hexa */
+
+void    my_put_nbr_base(int nbr, int base, int x)
 {
     if (nbr < 0)
       {
