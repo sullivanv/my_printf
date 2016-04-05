@@ -5,14 +5,16 @@ SRC	=	main.c	\
 		function.c	\
 		option_csid.c	\
 		option_oxX%.c	\
-		option_u.c
+		option_u.c	\
+		option_f.c	\
+		option_e.c
 
 OBJ	=	$(SRC:%.c=%.o)
 RM	=	rm -f
-CFRAGS	=	-W -Wall -Wextra -Werror
+CFLAGS	=	-W -Wall -Wextra -Werror -pedantic
 
 $(NAME):	$(OBJ)
-		$(CC) $(OBJ) -o $(NAME)
+		$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 all:
 	$(NAME)

@@ -12,54 +12,71 @@ t_fonction tab[] =
     {'X', &my_X},
     {'%', &my_pc},
     {'u', &my_u},
+    {'f', &my_f},
   };
 
-int    my_parse_str(char *str, int option_max, int position)
+int    my_parse_str(char *str, int position)
 {
-    int j;
-    
-    j = 0;
-    if (str[position] == '%')
-        {
-            while (j < option_max)
-            {
-                if (tab[j].opt == str[position + 1])
-                    return(j);
-                j++;
-            }
-        }
-    else
+  int j;
+  int option_max;
+  
+  j = 0;
+  option_max = 10;
+  if (str[position] == '%')
     {
-        my_putchar(str[position]);
-        return (-1);
+      if (str[position + 1] == '.')
+	return (-3);
+      while (j < option_max)
+	{
+	  if (tab[j].opt == str[position + 1])
+	    return(j);
+	  j++;
+	}
     }
-    return (-2);
+  else
+    {
+      my_putchar(str[position]);
+      return (-1);
+    }
+  return (-2);
+}
+
+int	my_print(char *str, int position, int j, va_list list)
+{
+  if (my_parse_str(str, position) != -1)
+    {
+      j = my_parse_str(str, position);
+      if (j == -3)
+	{
+	  my_other(str, position, list);
+	  position += 3;
+	}
+      else
+	{
+	  if (j == -2)
+	    {
+	      my_putstr("\n\nUne erreur est survenu, l'option n'est pas reconnu !\n\n");
+	      return(-2);
+	    }
+	  tab[j].fonction(list);
+	  position++;
+	}
+    }
+  return (position);
 }
 
 void    my_printf(char *str, ...)
 {
-    va_list list;
-    int option_max;
-    int position;
-    int j;
-    
-    position = -1;
-    option_max = 9;
-    j = 0;
-    va_start(list, str);
-    while (str[++position])
-    {
-        if (my_parse_str(str, option_max, position) != -1)
-        {
-            j = my_parse_str(str, option_max, position);
-            if (j == -2)
-            {
-                my_putstr("\n\nUne erreur est survenu, l'option n'est pas reconnu !\n");
-                return;
-            }
-            tab[j].fonction(list);
-            position++;
-        }
-    }
-    va_end(list);
+  va_list list;
+  int position;
+  int j;
+  
+  position = -1;
+  j = 0;
+  va_start(list, str);
+  while (str[++position])
+    position = my_print(str, position, j, list);
+  if (position == -2)
+    return;
+  va_end(list);
 }

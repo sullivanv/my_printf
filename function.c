@@ -2,28 +2,28 @@
 
 void    my_putchar(char c)
 {
-    write(1, &c, 1);
+  write(1, &c, 1);
 }
 
 int     my_strlen(char *str)
 {
-    int i;
-    
-    i = 0;
-    while (str[i])
-        i++;
-    return(i);
+  int i;
+  
+  i = 0;
+  while (str[i])
+    i++;
+  return(i);
 }
 
 void    my_putstr(char *str)
 {
-    int i;
-
-    i = 0;
-    while (str[i])
+  int i;
+  
+  i = 0;
+  while (str[i])
     {
-        my_putchar(str[i]);
-        i++;
+      my_putchar(str[i]);
+      i++;
     }
 }
 
@@ -52,23 +52,23 @@ void    my_put_nbr(int nbr)
 
 void    my_put_nbr_base(int nbr, int base, int x)
 {
-    if (nbr < 0)
-      {
-        nbr = nbr * (-1);
-        my_putchar('-');
-      }
-    if (nbr >= base)
-      {
-        my_put_nbr_base(nbr / base, base, x);
-        my_put_nbr_base(nbr % base, base, x);
-      }
-    else
-      {
-        if (nbr > 9 && x == 0)
-          my_putchar(nbr + 87);
-        else if (nbr > 9 && x == 1)
-          my_putchar(nbr + 55);
-        else
-          my_putchar(nbr + 48);
-      }
+  if (nbr < 0)
+    {
+      nbr = nbr * (-1);
+      my_putchar('-');
+    }
+  if (nbr >= base)
+    {
+      my_put_nbr_base(nbr / base, base, x);
+      my_put_nbr_base(nbr % base, base, x);
+    }
+  else
+    {
+      if (nbr > 9 && x == 0)
+	my_putchar(nbr + 87);
+      else if (nbr > 9 && x == 1)
+	my_putchar(nbr + 55);
+      else
+	my_putchar(nbr + 48);
+    }
 }
