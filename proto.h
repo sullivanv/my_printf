@@ -23,6 +23,8 @@ void    my_E(va_list list);
 void    my_e(va_list list);
 void    my_other(char *str, int position, va_list list);
 void    my_other_e(char *str, int position, va_list list, int x);
+void    my_other_e2(int x, int issmall, int exp, int f);
+int     my_other_e3(double nbr, int f);
 void    my_put_nbr_base(int nbr, int base, int x);
 
 

@@ -7,7 +7,8 @@ SRC	=	main.c	\
 		option_oxX%.c	\
 		option_u.c	\
 		option_f.c	\
-		option_e.c
+		option_e.c	\
+		option_e2.c
 
 OBJ	=	$(SRC:%.c=%.o)
 RM	=	rm -f

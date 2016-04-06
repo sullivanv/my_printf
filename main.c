@@ -57,12 +57,12 @@ int main()
     my_printf("1 - %.8f\n", 4 * cos(2.0));
     my_printf("1 - %f\n", 4 * cos(2.0));
     my_printf("5 - %d%%\n\n\n", 42); 
-    printf("rl6 - %.5e\n", (double)1.1);
-    my_printf("my6 - %.5e\n", (double)1.1);
-    printf("rl7 - %e\n", (double)-57121211.35);
-    my_printf("my7 - %e\n", (double)-57111211.35);
-    printf("rl8 - %E\n%e\n", (double)-12.7, (double)0.5);
-    my_printf("my8 - %E\n%e\n", (double)-12.7, (double)0.5);
+    printf("rl6 - %.8e\n", (double)1.1);
+    my_printf("my6 - %.8e\n", (double)1.1);
+    printf("rl7 - %.2e\n", (double)-57121211.35);
+    my_printf("my7 - %.2e\n", (double)-57111211.35);
+    printf("rl8 - %.5E\n%e\n", (double)-12.7, (double)0.5);
+    my_printf("my8 - %.5E\n%e\n", (double)-12.7, (double)0.5);
     my_printf("2 - %e\n", 4 * cos(2.0));
     return(0);
 }
