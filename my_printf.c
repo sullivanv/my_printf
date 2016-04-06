@@ -13,6 +13,8 @@ t_fonction tab[] =
     {'%', &my_pc},
     {'u', &my_u},
     {'f', &my_f},
+    {'E', &my_E},
+    {'e', &my_e},
   };
 
 int    my_parse_str(char *str, int position)
@@ -21,7 +23,7 @@ int    my_parse_str(char *str, int position)
   int option_max;
   
   j = 0;
-  option_max = 10;
+  option_max = 12;
   if (str[position] == '%')
     {
       if (str[position + 1] == '.')

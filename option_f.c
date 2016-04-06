@@ -28,10 +28,17 @@ void    my_other_f(char *str, int position, va_list list)
 
 void    my_other(char *str, int position, va_list list)
 {
+  int x;
+
+  x = 0;
   if (str[position + 3] == 'f' || str[position + 3] == 'F')
     my_other_f(str, position, list);
-  //  else if (str[position + 3] == 'e' || str[position + 3] == 'E') // Gere min/maj
-  //    my_other_e(str, position, list);
+  else if (str[position + 3] == 'e' || str[position + 3] == 'E')
+    {
+      if (str[position + 3] == 'E')
+	x = 1;
+      my_other_e(str, position, list, x);
+    }
 }
 
 void    my_f(va_list list)

@@ -19,7 +19,10 @@ void    my_X(va_list list);
 void    my_pc(va_list list);
 void    my_u(va_list list);
 void    my_f(va_list list);
+void    my_E(va_list list);
+void    my_e(va_list list);
 void    my_other(char *str, int position, va_list list);
+void    my_other_e(char *str, int position, va_list list, int x);
 void    my_put_nbr_base(int nbr, int base, int x);
 
 
