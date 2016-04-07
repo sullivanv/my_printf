@@ -1,8 +1,7 @@
 CC	=	gcc
 NAME	=	my_printf.so
 OUT	=	my_printf.a
-SRC	=	main.c	\
-		my_printf.c \
+SRC	=	my_printf.c \
 		function.c	\
 		option_csid.c	\
 		option_oxX%.c	\
@@ -23,7 +22,7 @@ my_printf_static:$(OBJ)
 	ranlib $(OUT)
 
 my_printf_dynamique:$(OBJ)
-	$(CC) -c $(SRC)
+	$(CC) -c -fPIC $(SRC)
 	$(CC) -shared -fPIC $(OBJ) -o $(NAME)
 clean:
 	$(RM) $(OBJ)
