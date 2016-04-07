@@ -1,3 +1,13 @@
+/*
+** option_f.c for My_printf in /Users/vitiel_s/my_printf
+** 
+** Made by VITIELLO Sullivan
+** Login   <vitiel_s@etna-alternance.net>
+** 
+** Started on  Thu Apr  7 16:31:26 2016 VITIELLO Sullivan
+** Last update Thu Apr  7 16:31:34 2016 VITIELLO Sullivan
+*/
+
 #include "proto.h"
 
 void    my_other_f(char *str, int position, va_list list)

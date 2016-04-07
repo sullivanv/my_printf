@@ -1,3 +1,13 @@
+/*
+** option_e.c for My_printf in /Users/vitiel_s/my_printf
+** 
+** Made by VITIELLO Sullivan
+** Login   <vitiel_s@etna-alternance.net>
+** 
+** Started on  Thu Apr  7 16:31:11 2016 VITIELLO Sullivan
+** Last update Thu Apr  7 16:31:14 2016 VITIELLO Sullivan
+*/
+
 #include "proto.h"
 
 void	my_e2(double nbr, int issmall, int exp, int f)

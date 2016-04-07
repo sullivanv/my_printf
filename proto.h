@@ -1,3 +1,13 @@
+/*
+** proto.h for My_printf in /Users/vitiel_s/my_printf
+** 
+** Made by VITIELLO Sullivan
+** Login   <vitiel_s@etna-alternance.net>
+** 
+** Started on  Thu Apr  7 16:32:55 2016 VITIELLO Sullivan
+** Last update Thu Apr  7 16:33:00 2016 VITIELLO Sullivan
+*/
+
 #ifndef __PROTO_H__
 # define __PROTO_H__
 

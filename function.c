@@ -1,3 +1,14 @@
+/*
+** function.c for My_printf in /Users/vitiel_s/my_printf
+** 
+** Made by VITIELLO Sullivan
+** Login   <vitiel_s@etna-alternance.net>
+** 
+** Started on  Thu Apr  7 16:32:00 2016 VITIELLO Sullivan
+** Last update Thu Apr  7 16:32:01 2016 VITIELLO Sullivan
+*/
+
+
 #include "proto.h"
 
 void    my_putchar(char c)

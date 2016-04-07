@@ -1,3 +1,13 @@
+##
+## Makefile for My_printf in /Users/vitiel_s/my_printf
+## 
+## Made by VITIELLO Sullivan
+## Login   <vitiel_s@etna-alternance.net>
+## 
+## Started on  Thu Apr  7 16:30:41 2016 VITIELLO Sullivan
+## Last update Thu Apr  7 16:30:44 2016 VITIELLO Sullivan
+##
+
 CC	=	gcc
 NAME	=	my_printf.so
 OUT	=	my_printf.a
