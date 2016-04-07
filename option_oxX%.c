@@ -40,5 +40,6 @@ void    my_pc(va_list list)
   char c;
     
   c = va_arg(list, int);
-  my_putchar('%');
+  c = '%';
+  my_putchar(c);
 }
