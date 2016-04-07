@@ -1,5 +1,4 @@
 #include "proto.h"
-#include <stdio.h>
 
 t_fonction tab[] =
   {

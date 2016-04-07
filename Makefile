@@ -1,5 +1,6 @@
 CC	=	gcc
-NAME	=	test_printf
+NAME	=	my_printf.so
+OUT	=	my_printf.a
 SRC	=	main.c	\
 		my_printf.c \
 		function.c	\
@@ -14,16 +15,22 @@ OBJ	=	$(SRC:%.c=%.o)
 RM	=	rm -f
 CFLAGS	=	-W -Wall -Wextra -Werror -pedantic
 
-$(NAME):	$(OBJ)
-		$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+all:	my_printf_dynamique my_printf_static
 
-all:
-	$(NAME)
+my_printf_static:$(OBJ)
+	$(CC) -c $(SRC)
+	ar rc $(OUT) $(OBJ)
+	ranlib $(OUT)
 
+my_printf_dynamique:$(OBJ)
+	$(CC) -c $(SRC)
+	$(CC) -shared -fPIC $(OBJ) -o $(NAME)
 clean:
 	$(RM) $(OBJ)
 
 fclean:	clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(OUT) *~
 
 re:	fclean all
+
+.PHONY:	all clean fclean re
